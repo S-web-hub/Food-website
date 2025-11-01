@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momo Magic | Our Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #fff7ed, #fff0e6);
+      color: #333;
+    }
+
+    /* Navbar */
+    .header {
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    /* Back Button */
+    .back-btn {
+      background: linear-gradient(90deg, #ff7a00, #ffb347);
+      color: white;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 10px 24px;
+      transition: all 0.3s ease;
+    }
+    .back-btn:hover {
+      background: linear-gradient(90deg, #ff8c1a, #ffc266);
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(255, 153, 0, 0.7);
+    }
+
+    /* Menu Card */
+    .menu-card {
+      background: white;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .menu-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.5);
+    }
+    .menu-card img {
+      transition: transform 0.5s ease;
+    }
+    .menu-card:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Category Title */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ff7a00;
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: #ff9b33;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      border-radius: 2px;
+    }
+
+    /* Add to Cart Button */
+    .cart-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #ff7a00, #ffb347);
+      color: white;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 10px 20px;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+    .cart-btn:hover {
+      background: linear-gradient(90deg, #ff8c1a, #ffc266);
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(255, 153, 0, 0.6);
+    }
+
+    /* 🌟 Glowing Search Bar (merged & simplified) */
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(90deg, #fff, #fff);
+      border: 2px solid #ff9b33;
+      border-radius: 30px;
+      padding: 5px 12px;
+      box-shadow: 0 0 10px rgba(255, 153, 0, 0.3);
+      transition: all 0.3s ease;
+      width: 220px;
+    }
+    .search-box:hover {
+      box-shadow: 0 0 20px rgba(255, 153, 0, 0.6);
+    }
+    .search-box input {
+      border: none;
+      outline: none;
+      width: 100%;
+      background: transparent;
+      padding: 5px;
+      color: #333;
+    }
+    .search-box i {
+      color: #ff7a00;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="header fixed top-0 left-0 w-full z-50 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-orange-600 flex items-center gap-2">
+        <img src="https://cdn-icons-png.flaticon.com/512/3082/3082031.png" class="w-8 h-8" alt="logo"> Momo Mart
+      </h1>
+
+      <nav class="hidden md:flex items-center space-x-6 font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-orange-600">Home</a>
+        <a href="#menu" class="text-orange-600">Menu</a>
+
+        <!-- 🔍 Search Bar Integrated -->
+        <div class="search-box">
+          <input type="text" placeholder="Search momos...">
+          <i class="fas fa-search"></i>
+        </div>
+      </nav>
+
+      <a href="index.html" class="back-btn">⬅ Back</a>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="pt-28 pb-10 text-center">
+    <h2 class="text-5xl font-bold text-orange-600 mb-4">🥟 Our Delicious Menu</h2>
+    <p class="text-gray-600 text-lg">Choose from our variety of freshly made momos — steamed, fried, and tandoori delights!</p>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- Steamed Momos -->
+    <h3 class="section-title">Steamed Momos</h3>
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="menu-card">
+        <img src="https://th.bing.com/th/id/OIP.pyUQ7LH7PnC_bE5JUYiwOwHaE8" alt="Steamed Veg Momos" class="w-full h-56 object-cover">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Veg Steamed Momos</h4>
+          <p class="text-gray-600 mb-2">Stuffed with cabbage, carrots & spices.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹80</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://bing.com/th?id=OSK.147997def2c40e615eb34b7d65118f9f">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Chicken Steamed Momos</h4>
+          <p class="text-gray-600 mb-2">Juicy minced chicken wrapped in soft dough.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹100</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://th.bing.com/th/id/OIP.AzfDCrL3JshUTI7BGQ-7ogHaD6?w=343&h=181&c=7&r=0&o=7&dpr=1.1&pid=1.7&rm=3">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Paneer Steamed Momos</h4>
+          <p class="text-gray-600 mb-2">Soft paneer cubes blended with herbs.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹90</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fried Momos -->
+    <h3 class="section-title">Fried Momos</h3>
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <div class="menu-card">
+        <img src="https://thumbs.dreamstime.com/b/traditional-food-dumpling-momos-303489110.jpg" alt="Fried Veg Momos" class="w-full h-56 object-cover">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Crispy Veg Momos</h4>
+          <p class="text-gray-600 mb-2">Golden fried, crunchy outer layer.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹90</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://th.bing.com/th/id/OIP.fPRY1VJduiwjGVDTbnlwUwHaE8" alt="Chicken Fried Momos" class="w-full h-56 object-cover">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Chicken Fried Momos</h4>
+          <p class="text-gray-600 mb-2">Crunchy shell with spicy chicken filling.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹110</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://th.bing.com/th/id/OIP.YsXyGlRKhUmvKDNnaCFmDwHaE8" alt="Paneer Fried Momos" class="w-full h-56 object-cover">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Paneer Fried Momos</h4>
+          <p class="text-gray-600 mb-2">Crispy exterior, soft paneer inside.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹100</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tandoori Momos -->
+    <h3 class="section-title">Tandoori Momos</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="menu-card">
+        <img src="https://hogr.app/blog/wp-content/uploads/2022/10/image-98-edited.png" alt="Veg Tandoori Momos" class="w-full h-56 object-cover">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Veg Tandoori Momos</h4>
+          <p class="text-gray-600 mb-2">Smoky flavor with tandoori spices.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹120</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://th.bing.com/th/id/OIP.ZqctRTbll-7ixcr4yVLc3wHaE7" alt="Chicken Tandoori Momos" class="w-full h-56 object-cover">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Chicken Tandoori Momos</h4>
+          <p class="text-gray-600 mb-2">Char-grilled with bold Indian masala.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹140</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="menu-card">
+        <img src="https://th.bing.com/th/id/OIP.IUInSOxCe1bx1zPZe6COlgHaE8" alt="Paneer Tandoori Momos" class="w-full h-56 object-cover">
+        <div class="p-5 text-center">
+          <h4 class="text-xl font-semibold mb-2">Paneer Tandoori Momos</h4>
+          <p class="text-gray-600 mb-2">Soft paneer grilled with smoky aroma.</p>
+          <p class="text-orange-600 font-semibold text-lg">₹130</p>
+          <button class="cart-btn">🛒 Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-orange-600 text-white text-center py-6 mt-10">
+    © 2025 Momo Magic | Crafted with ❤️ by Sneha Das
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+</body>
+</html>
